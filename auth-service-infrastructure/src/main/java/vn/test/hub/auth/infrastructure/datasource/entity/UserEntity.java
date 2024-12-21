@@ -1,20 +1,20 @@
 package vn.test.hub.auth.infrastructure.datasource.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
 import lombok.Getter;
 import lombok.Setter;
+import org.hibernate.annotations.UuidGenerator;
 
-@Getter
-@Setter
+@Getter @Setter
 @Entity
 @Table(name = "users")
 public class UserEntity extends EntityBase{
 
-    @Id
+    @Id @GeneratedValue
+    @UuidGenerator
+    @Column(name = "id", nullable = false)
     private String id;
 
     @NotBlank

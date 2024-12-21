@@ -22,6 +22,6 @@ public class AuthenticationServiceImpl implements AuthenticationService {
 
     @Override
     public void logout() {
-
+        throw new UnsupportedOperationException("Not supported yet.");
     }
 }

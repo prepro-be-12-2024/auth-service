@@ -4,9 +4,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication(scanBasePackages = {
-        "vn.test.hub.auth.worker",
-        "vn.test.hub.auth.business",
-        "vn.test.hub.auth.infrastructure"
+        "vn.test.hub.auth.*"
 })
 public class AuthServiceWorker {
 
