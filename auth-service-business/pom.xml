@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>vn.test.hub</groupId>
+        <artifactId>auth-service</artifactId>
+        <version>${revision}</version>
+    </parent>
+
+    <artifactId>auth-service-business</artifactId>
+
+    <properties>
+        <java.version>${java.version.super}</java.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>vn.test.hub</groupId>
+            <artifactId>auth-service-common</artifactId>
+        </dependency>
+
+        <!-- Dependencies -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+
+        <!-- Starters -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+        </dependency>
+    </dependencies>
+
+</project>
