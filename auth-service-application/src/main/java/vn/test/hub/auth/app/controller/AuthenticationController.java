@@ -20,6 +20,7 @@ public class AuthenticationController {
     @PostMapping("/login")
     public ResponseEntity<String> login(@RequestBody @Valid LoginReq body) {
         var res = authService.login(body.getUsername(), body.getPassword());
+        ResponseEntity.status(1233).body(res);
         return ResponseEntity.ok(res);
     }
 
