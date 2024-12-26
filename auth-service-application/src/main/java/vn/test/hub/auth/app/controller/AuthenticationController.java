@@ -2,7 +2,6 @@ package vn.test.hub.auth.app.controller;
 
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -16,13 +15,17 @@ import vn.test.hub.auth.business.service.AuthenticationService;
 @RequestMapping("/v1/auth")
 public class AuthenticationController {
 
-    @Qualifier("authenticationService")
     private final AuthenticationService authService;
 
     @PostMapping("/login")
     public ResponseEntity<String> login(@RequestBody @Valid LoginReq body) {
         var res = authService.login(body.getUsername(), body.getPassword());
         return ResponseEntity.ok(res);
+    }
+
+    @PostMapping("/logout")
+    public ResponseEntity<String> logout() {
+        return ResponseEntity.ok("logged out");
     }
 
 }
